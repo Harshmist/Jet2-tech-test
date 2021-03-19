@@ -1,0 +1,13 @@
+
+.btn-primary:hover{
+  background: white !important;
+  color: #203240;
+}
+
+.btn-secondary:hover{
+  background: #203240 !important;
+  color: white !important;
+}
+i:hover{
+  color: gray !important;
+}
