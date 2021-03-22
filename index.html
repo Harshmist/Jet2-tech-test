@@ -8,19 +8,19 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="styles/style.css"/>
 
     <title>Jet2 Tech Test</title>
   </head>
   <body>
-    <div class="banner-span" style="background-color: #EE3123;">
-<img src="Jet2-logo.PNG" alt="Jet2 Logo" style="margin-left: 6%">
+    <div class="banner-span">
+<img class="logo" src="Jet2-logo.PNG" alt="Jet2 Logo">
 </div>
-<nav style="background-color: #203240; padding-left: 7%; height: 3rem;">
+<nav>
   <!-- Button to trigger the requested modal -->
-  <button type="button" class="btn btn-primary" id="confirm-Modal" style="background-color: #203240; height: 100%"><strong>Book now</strong></button>
+  <button type="button" class="btn btn-primary" id="confirm-Modal"><strong><em>Book now</em></strong></button>
   <!-- Button to trigger the social modal -->
-  <button type="button" class="btn btn-primary" id="social-Modal" style="background-color: #203240; height: 100%"><strong>Socials</strong></button>
+  <button type="button" class="btn btn-primary" id="social-Modal"><strong><em>Socials</em></strong></button>
 </nav>
 
 
@@ -28,18 +28,18 @@
   <!-- The booking modal -->
   <div class="modal fade" id="confirmModal" tabindex="-1" role="dialog" aria-labelledby="confirmModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
-      <div class="modal-content" style="background-color: #F2F2F2; display:flex; justify-content: center">
-        <div class="modal-header" style="border-style: none; margin-top: 1rem;">
-          <div class="check-icon" style="margin-right: 5%;"><i class="fas fa-check-circle" style="color: green; font-size: 150%;"></i></div>
-          <h5 class="modal-title" id="confirmModalLabel" style="color: #203240"> Congratulations your jet2 holiday booking has been confirmed</h5>
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="check-icon"><i class="fas fa-check-circle" style="color: green; font-size: 150%;"></i></div>
+          <h5 class="modal-title" id="confirmModalLabel"> Congratulations your jet2 holiday booking has been confirmed</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
         </div>
-        <div class="modal-body" style="border-style: none">
+        <div class="modal-body">
           <p style="padding: 5%">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris.</p>
         </div>
-        <div class="modal-footer" style="display: flex; justify-content: center">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal" style="background-color: #F2F2F2; color: #626262;"><strong>Cancel</strong></button>
-          <button type="button" class="btn btn-primary" style="background-color: #203240;"  onclick="alert('See you monday? (just kidding)')"><strong>Confirm</strong></button>
+        <div class="modal-footer">
+          <button type="button" id="modal-cancel" class="btn btn-secondary" data-dismiss="modal"><strong><em>Cancel</em></strong></button>
+          <button type="button" id="modal-confirm" class="btn btn-primary" data-dismiss="modal"><strong><em>Confirm</em></strong></button>
         </div>
       </div>
     </div>
@@ -48,18 +48,18 @@
 <!-- The socials modal -->
 <div class="modal fade" id="socialModal" tabindex="-1" role="dialog" aria-labelledby="socialModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
-    <div class="modal-content" style="background-color: #F2F2F2">
-      <div class="modal-header" style="border-style: none; margin-top: 1rem; display: flex; justify-content: center">
-        <div class="check-icon" style="margin-right: 5%;"></div>
-        <h5 class="modal-title" id="socialModalLabel" style="color: #203240;">Check out my professional socials!</h5>
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="check-icon"></div>
+        <h5 class="modal-title" id="socialModalLabel">Check out my professional socials!</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div class="modal-body" style="border-style: none; display: flex; justify-content: space-between">
-      <a href="https://github.com/Harshmist"><i class="fab fa-github" style="color:black; font-size: 5rem;"></i></a>
-      <a href="https://www.linkedin.com/in/dan-dawson/"><i class="fab fa-linkedin" style="font-size:5rem; color:black"></i></a>
+      <div class="modal-body-social">
+      <a href="https://github.com/Harshmist"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/dan-dawson/"><i class="fab fa-linkedin"></i></a>
       </div>
-      <div class="modal-footer" style="display: flex; justify-content: center">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal" style="background-color: #F2F2F2; color: #626262;"><strong>Go back</strong></button>
+      <div class="modal-footer">
+        <button type="button" id="modal-go-back" class="btn btn-secondary" data-dismiss="modal"><strong>Go back</strong></button>
       </div>
     </div>
   </div>
@@ -68,15 +68,7 @@
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-  <script>
-  // Javascript to launch modals
-  $("#confirm-Modal").click(() => {
-        $("#confirmModal").modal();
-  });
-
-  $("#social-Modal").click(() => {
-        $("#socialModal").modal();
-  });</script>
+  <script src="script.js"></script>
 
   </body>
 

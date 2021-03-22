@@ -1,0 +1,128 @@
+.banner-span {
+  background-color: #EE3123;
+}
+
+.logo {
+  margin-left: 6%;
+}
+
+nav {
+  background-color: #203240;
+  padding-left: 6%;
+  height: 3rem;
+}
+
+h5 {
+  color: #203240;
+}
+
+i {
+  color: black;
+  font-size: 5rem;
+}
+
+.btn-primary {
+  border-color: #203240;
+  background-color: #203240;
+  height: 100%;
+}
+
+.btn-secondary {
+  height: 100%;
+  background-color: #F2F2F2;
+  color: #203240;
+}
+
+.modal-header {
+  border-style: none;
+  margin-top: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.modal-content {
+  background-color: #F2F2F2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.check-icon {
+  margin-right: 5%;
+}
+
+.modal-body {
+  border-style: none;
+}
+
+.modal-body-social {
+  border-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.modal-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#modal-cancel {
+  width: 33%;
+}
+
+#modal-confirm {
+  width: 33%;
+}
+
+#modal-go-back {
+  width: 33%;
+}
+
+/*Hover animations for buttons and the social icons*/
+.btn-primary:hover {
+  background: #F2F2F2 !important;
+  color: #203240;
+  border-color: #203240;
+}
+
+.btn-secondary:hover {
+  background: #203240 !important;
+  color: white !important;
+}
+
+i:hover {
+  color: gray !important;
+}
+
+@media only screen and (max-width: 600px) {
+  .modal-footer {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  #modal-cancel {
+    width: 100%;
+    margin-bottom: 1%;
+  }
+  #modal-confirm {
+    width: 99.5%;
+    margin-left: -1%;
+  }
+  #modal-go-back {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=style.css.map */
